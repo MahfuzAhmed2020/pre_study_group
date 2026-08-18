@@ -1,5 +1,11 @@
 package pre_study_group;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintStream;
+import java.nio.file.Files;
 import java.time.Duration;
 import java.util.List;
 
@@ -10,156 +16,625 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 public class Browser {
 
-	static WebDriver dr = null;
+    static WebDriver dr = null;
 
-	public static WebDriver openBrowser(String browser) {
+    // =========================================================
+    // OPEN BROWSER
+    // =========================================================
 
-		if (browser.equalsIgnoreCase("chrome")) {
+    public static WebDriver openBrowser(String browser) {
 
-			dr = new ChromeDriver();
+        if (browser.equalsIgnoreCase("chrome")) {
 
-		} else if (browser.equalsIgnoreCase("firefox")) {
+            dr = new ChromeDriver();
 
-			dr = new FirefoxDriver();
+        } else if (browser.equalsIgnoreCase("firefox")) {
 
-		} else {
+            dr = new FirefoxDriver();
 
-			throw new IllegalArgumentException("Browser must be chrome or firefox");
-		}
+        } else {
 
-		return dr;
-	}
+            throw new IllegalArgumentException(
+                    "Browser must be chrome or firefox"
+            );
+        }
 
-	public static void main(String[] args) throws InterruptedException {
+        return dr;
+    }
 
-		WebDriver driver = openBrowser("chrome");
+    // =========================================================
+    // MAIN
+    // =========================================================
 
-		driver.get("http://localhost:8081/public/login.php");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().window().maximize();
+    public static void main(String[] args)
+            throws InterruptedException, IOException {
 
-		System.out.println("Page Title: " + driver.getTitle());
+        // =====================================================
+        // TEST RESULT LOGGING
+        // =====================================================
 
-		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("d@gmail.com");
-		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("Test@123");
-		driver.findElement(By.xpath("//*[@id=\"loginBtn\"]")).click();
-		
-		// profile page
+        String resultsFolder =
+                System.getProperty("user.dir") + "\\test-results";
 
-		Thread.sleep(4000);
+        File folder = new File(resultsFolder);
 
-		driver.findElement(By.xpath("//*[@id=\"products\"]/div[1]/button")).click();// Wireless Earbuds
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"products\"]/div[2]/button")).click();// Bluetooth Speaker
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"products\"]/div[3]/button")).click();// Smart Phone Case
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"products\"]/div[4]/button")).click();// Charging Cable Set
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"products\"]/div[5]/button")).click();// Fitness Tracker Band
-		/*
-		 * 
-		 * <select id="card" required>
-    		<option value="">Select Card</option>
-   			<option value="4111111111111111">4111111111111111</option>
-    		<option value="4222222222222222">4222222222222222</option>
-    		<option value="5555555555554444">5555555555554444</option>
-    		<option value="378282246310005">378282246310005</option>
-    		<option value="6011111111111117">6011111111111117</option>
-			</select>
-		 * 
-		 */
-		Thread.sleep(2000);
-		Select card = new Select(driver.findElement(By.xpath("//*[@id=\"card\"]")));
+        if (!folder.exists()) {
+            folder.mkdirs();
+        }
 
-		card.selectByValue("4111111111111111");
+        String resultsFile =
+                resultsFolder + "\\test-result.txt";
 
-		Thread.sleep(2000);
-		Select address = new Select(driver.findElement(By.xpath("//*[@id=\"address\"]")));
+        String tempFile =
+                resultsFolder + "\\current-result.txt";
 
-		address.selectByVisibleText("456 Oak Avenue, Los Angeles, CA 90001, USA");
-		// checkout
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"Checkout\"]")).click();
-		// My Orders
-		// driver.findElement(By.xpath("//*[@id=\"My_Orders\"]")).click();
-		// logout
-		// driver.findElement(By.xpath("/html/body/div/button[2]")).click();
-		// update profile
-		// driver.findElement(By.xpath("//*[@id=\"Update_Profile\"]")).click();
+        // Save original Eclipse console
+        PrintStream console = System.out;
 
-		
-		/*
-		 * Alert
-		 * */
-		Thread.sleep(2000);
-		Alert alert = driver.switchTo().alert();
-		Thread.sleep(2000);
-		String alertText = alert.getText();
+        // Create temporary file for this execution
+        PrintStream file = new PrintStream(
+                new FileOutputStream(tempFile)
+        );
 
-		System.out.println("Alert Message: " + alertText);
-		Thread.sleep(2000);
-		alert.accept();
-		
-		
-		//order confirmation page
-		System.out.println("Page Title: " + driver.getTitle());
-		
-		//=========================================================
-		List<WebElement> orders =driver.findElements(By.xpath("//*[@id=\"orders\"]"));
-		WebElement latestOrder = orders.get(0);
-		
-		System.out.println("Number of orders: " + orders.size());
-//+++++++++++++++++++++++++++++++++++++++++++
-		
+        // Send output to BOTH Eclipse console and file
+        System.setOut(new PrintStream(new OutputStream() {
 
-		for (WebElement order : orders) {
+            @Override
+            public void write(int b) throws IOException {
 
-		    System.out.println("====================");
-		    System.out.println(order.getText());
-		}
-		
-		
-		System.out.println("=========================================");	
-		
-		
+                console.write(b);
+                file.write(b);
+            }
 
-		String orderNumber = latestOrder.findElement(By.xpath("//*[@id=\"orders\"]/div[1]/p[1]")).
-				getText().replace("Order #", "").trim();
+        }));
 
-		String trackingNumber = latestOrder.findElement(
-		        By.xpath(".//p[b[contains(text(),'Tracking')]]")
-		).getText()
-		 .replace("Tracking:", "")
-		 .trim();
+        // =====================================================
+        // TEST START
+        // =====================================================
 
-		System.out.println("Latest Order #: " + orderNumber);
-		System.out.println("Latest Tracking: " + trackingNumber);
-		
-		//==========================
-		System.out.println("=========================================");	
-		
-		// Verify Latest Order Number
-		if (orderNumber.equals(orderNumber)) {
-		    System.out.println("PASS: Latest Order # is "+orderNumber);
-		} else {
-		    System.out.println("FAIL: Expected Order "+orderNumber+" but found Order #" + orderNumber);
-		}
+        System.out.println("=========================================");
+        System.out.println("TEST EXECUTION STARTED");
+        System.out.println("=========================================");
 
-		// Verify Latest Tracking Number
-		if (trackingNumber.equals(trackingNumber)) {
-		    System.out.println("PASS: Latest Tracking Number is " +trackingNumber);
-		} else {
-		    System.out.println(
-		        "FAIL: Expected Tracking Number "+trackingNumber+" but found  "
-		        + trackingNumber
-		    );
-		}
-		// Keep browser open while testing
-		// driver.quit();
-	}
+        WebDriver driver = null;
+
+        try {
+
+            // =================================================
+            // OPEN CHROME
+            // =================================================
+
+            driver = openBrowser("chrome");
+
+            driver.manage().timeouts()
+                    .implicitlyWait(Duration.ofSeconds(10));
+
+            driver.manage().window().maximize();
+
+            // =================================================
+            // LOGIN PAGE
+            // =================================================
+
+            driver.get(
+                    "http://localhost:8081/public/login.php"
+            );
+
+            System.out.println(
+                    "Page Title: " + driver.getTitle()
+            );
+
+            // =================================================
+            // LOGIN
+            // =================================================
+
+            driver.findElement(
+                    By.xpath("//*[@id=\"email\"]")
+            ).sendKeys("d@gmail.com");
+
+            driver.findElement(
+                    By.xpath("//*[@id=\"password\"]")
+            ).sendKeys("Test@123");
+
+            driver.findElement(
+                    By.xpath("//*[@id=\"loginBtn\"]")
+            ).click();
+
+            System.out.println("Login completed");
+
+            // =================================================
+            // PRODUCTS
+            // =================================================
+
+            Thread.sleep(4000);
+
+            driver.findElement(
+                    By.xpath("//*[@id=\"products\"]/div[1]/button")
+            ).click();
+
+            System.out.println(
+                    "Added: Wireless Earbuds"
+            );
+
+            Thread.sleep(2000);
+
+            driver.findElement(
+                    By.xpath("//*[@id=\"products\"]/div[2]/button")
+            ).click();
+
+            System.out.println(
+                    "Added: Bluetooth Speaker"
+            );
+
+            Thread.sleep(2000);
+
+            driver.findElement(
+                    By.xpath("//*[@id=\"products\"]/div[3]/button")
+            ).click();
+
+            System.out.println(
+                    "Added: Smart Phone Case"
+            );
+
+            Thread.sleep(2000);
+
+            driver.findElement(
+                    By.xpath("//*[@id=\"products\"]/div[4]/button")
+            ).click();
+
+            System.out.println(
+                    "Added: Charging Cable Set"
+            );
+
+            Thread.sleep(2000);
+
+            driver.findElement(
+                    By.xpath("//*[@id=\"products\"]/div[5]/button")
+            ).click();
+
+            System.out.println(
+                    "Added: Fitness Tracker Band"
+            );
+
+            // =================================================
+            // SELECT CARD
+            // =================================================
+
+            Thread.sleep(2000);
+
+            Select card = new Select(
+                    driver.findElement(
+                            By.xpath("//*[@id=\"card\"]")
+                    )
+            );
+
+            card.selectByValue("4111111111111111");
+
+            System.out.println(
+                    "Card selected"
+            );
+
+            // =================================================
+            // SELECT ADDRESS
+            // =================================================
+
+            Thread.sleep(2000);
+
+            Select address = new Select(
+                    driver.findElement(
+                            By.xpath("//*[@id=\"address\"]")
+                    )
+            );
+
+            address.selectByVisibleText(
+                    "456 Oak Avenue, Los Angeles, CA 90001, USA"
+            );
+
+            System.out.println(
+                    "Delivery address selected"
+            );
+
+            // =================================================
+            // CHECKOUT
+            // =================================================
+
+            Thread.sleep(2000);
+
+            driver.findElement(
+                    By.xpath("//*[@id=\"Checkout\"]")
+            ).click();
+
+            System.out.println(
+                    "Checkout button clicked"
+            );
+
+            // =================================================
+            // HANDLE ALERT
+            // =================================================
+
+            Thread.sleep(2000);
+
+            Alert alert = driver.switchTo().alert();
+
+            String alertText = alert.getText();
+
+            System.out.println(
+                    "Alert Message:"
+            );
+
+            System.out.println(
+                    alertText
+            );
+
+            // =================================================
+            // GET TRACKING NUMBER FROM CHECKOUT
+            // =================================================
+
+            String trackingFromCheckout =
+                    alertText
+                            .split("Tracking Number:")[1]
+                            .trim();
+
+            System.out.println(
+                    "Tracking From Checkout: "
+                            + trackingFromCheckout
+            );
+
+            // Click OK
+            alert.accept();
+
+            System.out.println(
+                    "Alert accepted"
+            );
+
+            // =================================================
+            // MY ORDERS
+            // =================================================
+
+            Thread.sleep(2000);
+
+            System.out.println(
+                    "========================================="
+            );
+
+            System.out.println(
+                    "MY ORDERS"
+            );
+
+            System.out.println(
+                    "Page Title: " + driver.getTitle()
+            );
+
+            // =================================================
+            // GET ALL INDIVIDUAL ORDERS
+            // =================================================
+
+            List<WebElement> orders =
+                    driver.findElements(
+                            By.cssSelector("#orders .order")
+                    );
+
+            System.out.println(
+                    "Number of orders: "
+                            + orders.size()
+            );
+
+            // =================================================
+            // DISPLAY ALL ORDERS
+            // =================================================
+
+            for (WebElement order : orders) {
+
+                System.out.println(
+                        "===================="
+                );
+
+                System.out.println(
+                        order.getText()
+                );
+            }
+
+            System.out.println(
+                    "========================================="
+            );
+
+            // =================================================
+            // GET LATEST ORDER
+            // =================================================
+
+            if (orders.size() == 0) {
+
+                System.out.println(
+                        "FAIL: No orders found"
+                );
+
+            } else {
+
+                // Assuming newest order is displayed first
+                WebElement latestOrder =
+                        orders.get(0);
+
+                // =============================================
+                // GET ORDER NUMBER
+                // =============================================
+
+                String orderNumber =
+                        latestOrder.findElement(
+                                By.xpath(
+                                        ".//p[b[contains(text(),'Order')]]"
+                                )
+                        )
+                        .getText()
+                        .replace("Order #", "")
+                        .trim();
+
+                // =============================================
+                // GET TRACKING NUMBER
+                // =============================================
+
+                String trackingNumber =
+                        latestOrder.findElement(
+                                By.xpath(
+                                        ".//p[b[contains(text(),'Tracking')]]"
+                                )
+                        )
+                        .getText()
+                        .replace("Tracking:", "")
+                        .trim();
+
+                // =============================================
+                // GET STATUS
+                // =============================================
+
+                String status =
+                        latestOrder.findElement(
+                                By.xpath(
+                                        ".//p[b[contains(text(),'Status')]]"
+                                )
+                        )
+                        .getText()
+                        .replace("Status:", "")
+                        .trim();
+
+                // =============================================
+                // GET TOTAL
+                // =============================================
+
+                String total =
+                        latestOrder.findElement(
+                                By.xpath(
+                                        ".//p[b[contains(text(),'Total')]]"
+                                )
+                        )
+                        .getText()
+                        .replace("Total:", "")
+                        .trim();
+
+                // =============================================
+                // PRINT LATEST ORDER
+                // =============================================
+
+                System.out.println(
+                        "LATEST ORDER"
+                );
+
+                System.out.println(
+                        "Latest Order #: "
+                                + orderNumber
+                );
+
+                System.out.println(
+                        "Latest Tracking: "
+                                + trackingNumber
+                );
+
+                System.out.println(
+                        "Latest Status: "
+                                + status
+                );
+
+                System.out.println(
+                        "Latest Total: "
+                                + total
+                );
+
+                // =============================================
+                // VERIFY ORDER NUMBER
+                // =============================================
+
+                System.out.println(
+                        "========================================="
+                );
+
+                if (!orderNumber.isEmpty()) {
+
+                    System.out.println(
+                            "PASS: Latest Order # is "
+                                    + orderNumber
+                    );
+
+                } else {
+
+                    System.out.println(
+                            "FAIL: Order number is empty"
+                    );
+                }
+
+                // =============================================
+                // VERIFY TRACKING NUMBER
+                // =============================================
+
+                if (trackingFromCheckout.equals(
+                        trackingNumber)) {
+
+                    System.out.println(
+                            "PASS: Tracking number matches"
+                    );
+
+                    System.out.println(
+                            "Checkout Tracking: "
+                                    + trackingFromCheckout
+                    );
+
+                    System.out.println(
+                            "Orders Tracking:   "
+                                    + trackingNumber
+                    );
+
+                } else {
+
+                    System.out.println(
+                            "FAIL: Tracking number does NOT match"
+                    );
+
+                    System.out.println(
+                            "Expected: "
+                                    + trackingFromCheckout
+                    );
+
+                    System.out.println(
+                            "Actual:   "
+                                    + trackingNumber
+                    );
+                }
+
+                // =============================================
+                // VERIFY STATUS
+                // =============================================
+
+                if (status.equalsIgnoreCase(
+                        "Processing")) {
+
+                    System.out.println(
+                            "PASS: Order status is Processing"
+                    );
+
+                } else {
+
+                    System.out.println(
+                            "FAIL: Unexpected order status: "
+                                    + status
+                    );
+                }
+
+                // =============================================
+                // VERIFY TOTAL EXISTS
+                // =============================================
+
+                if (!total.isEmpty()) {
+
+                    System.out.println(
+                            "PASS: Order total is "
+                                    + total
+                    );
+
+                } else {
+
+                    System.out.println(
+                            "FAIL: Order total is empty"
+                    );
+                }
+            }
+
+            // =================================================
+            // TEST COMPLETED
+            // =================================================
+
+            System.out.println(
+                    "========================================="
+            );
+
+            System.out.println(
+                    "TEST EXECUTION COMPLETED"
+            );
+
+            System.out.println(
+                    "========================================="
+            );
+
+        } finally {
+
+            // =================================================
+            // CLOSE BROWSER
+            // =================================================
+
+            if (driver != null) {
+
+                // Uncomment when you don't want browser to stay open
+                // driver.quit();
+            }
+
+            // =================================================
+            // CLOSE CURRENT RESULT FILE
+            // =================================================
+
+            file.close();
+
+            // =================================================
+            // READ NEW RESULT
+            // =================================================
+
+            String newResult =
+                    Files.readString(
+                            new File(tempFile).toPath()
+                    );
+
+            // =================================================
+            // READ OLD RESULTS
+            // =================================================
+
+            String oldResult = "";
+
+            File oldFile =
+                    new File(resultsFile);
+
+            if (oldFile.exists()) {
+
+                oldResult =
+                        Files.readString(
+                                oldFile.toPath()
+                        );
+            }
+
+            // =================================================
+            // NEW RESULT ON TOP
+            // =================================================
+
+            String combinedResult =
+                    "=========================================\n"
+                    + "NEW TEST EXECUTION\n"
+                    + "=========================================\n"
+                    + newResult
+                    + "\n\n"
+                    + oldResult;
+
+            // =================================================
+            // WRITE RESULT FILE
+            // =================================================
+
+            Files.writeString(
+                    oldFile.toPath(),
+                    combinedResult
+            );
+
+            // =================================================
+            // DELETE TEMP FILE
+            // =================================================
+
+            new File(tempFile).delete();
+
+            // =================================================
+            // RESTORE ECLIPSE CONSOLE
+            // =================================================
+
+            System.setOut(console);
+
+            System.out.println(
+                    "Test result saved to: "
+                            + resultsFile
+            );
+        }
+    }
 }
