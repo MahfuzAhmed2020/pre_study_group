@@ -5,19 +5,23 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
-import java.nio.file.Files;
-import java.time.Duration;
+import java.time.Duration; 
 import java.util.List;
+import java.util.Random;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriver; 
 import org.openqa.selenium.support.ui.Select;
 
-public class Browser {
+
+
+public class Registration {
+
+    
 
     static WebDriver dr = null;
 
@@ -53,7 +57,7 @@ public class Browser {
             throws InterruptedException, IOException {
 
         // =====================================================
-        // TEST RESULT LOGGING
+        // TEST RESULT registration
         // =====================================================
 
         String resultsFolder =
@@ -66,10 +70,10 @@ public class Browser {
         }
 
         String resultsFile =
-                resultsFolder + "\\test-result.txt";
+                resultsFolder + "\\registration-test-result.txt";
 
         String tempFile =
-                resultsFolder + "\\current-result.txt";
+                resultsFolder + "\\registration-current-result.txt";
 
         // Save original Eclipse console
         PrintStream console = System.out;
@@ -92,7 +96,7 @@ public class Browser {
         }));
 
         // =====================================================
-        // TEST START
+        // registration TEST START
         // =====================================================
 
         System.out.println("=========================================");
@@ -104,10 +108,10 @@ public class Browser {
         try {
 
             // =================================================
-            // OPEN CHROME
+            // OPEN firefox
             // =================================================
 
-            driver = openBrowser("chrome");
+            driver = openBrowser("firefox");
 
             driver.manage().timeouts()
                     .implicitlyWait(Duration.ofSeconds(10));
@@ -115,11 +119,11 @@ public class Browser {
             driver.manage().window().maximize();
 
             // =================================================
-            // LOGIN PAGE
+            // registration PAGE
             // =================================================
 
             driver.get(
-                    "http://localhost:8081/public/login.php"
+                    "http://localhost:8081/public/index.php"
             );
 
             System.out.println(
@@ -127,12 +131,65 @@ public class Browser {
             );
 
             // =================================================
+            // registration
+            // =================================================
+            System.out.println(
+                    "Page Title: " + driver.getTitle()
+            );
+            
+            // =================================================
+            // add random name
+            // =================================================        
+
+            Random random = new Random();
+
+            String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            StringBuilder name = new StringBuilder();
+
+            for (int i = 0; i < 5; i++) {
+               name.append(characters.charAt(random.nextInt(characters.length())));
+                }
+
+            driver.findElement(
+                    By.xpath("//*[@id=\"first_name\"]")
+                            ).sendKeys(name.toString());
+
+            driver.findElement(
+                By.xpath("//*[@id=\"last_name\"]")
+                        ).sendKeys(name.toString());
+
+            driver.findElement(
+                    By.xpath("//*[@id=\"email\"]")
+            ).sendKeys(name.toString() + "@gmail.com"); //d@gmail.com, x, r, ok, k, u, pre, n, 
+
+            driver.findElement(
+                    By.xpath("//*[@id=\"password\"]")
+            ).sendKeys("Test@123");
+
+  
+             driver.findElement(
+                    By.xpath("//*[@id=\"confirm_password\"]")
+                            ).sendKeys("Test@123");
+            
+            
+
+            driver.findElement(By.xpath("//*[@id=\"agree_terms\"]")).click();
+            driver.findElement(By.xpath("/html/body/div/div[2]/form/button")).click();
+        
+            System.out.println("registration completed");
+            System.out.println("Clicking on login link to go to login page");
+
+            driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/a")).click();
+
+     
+
+            // =================================================
             // LOGIN
             // =================================================
 
             driver.findElement(
                     By.xpath("//*[@id=\"email\"]")
-            ).sendKeys("mahfuz@gmail.com"); //d@gmail.com, x, r, ok, k, u, pre, n, 
+            ).sendKeys(name.toString() + "@gmail.com"); //d@gmail.com, x, r, ok, k, u, pre, n, 
 
             driver.findElement(
                     By.xpath("//*[@id=\"password\"]")
@@ -557,87 +614,24 @@ public class Browser {
                     "========================================="
             );
 
-        } finally {
-
-            // =================================================
-            // CLOSE BROWSER
-            // =================================================
-
-            if (driver != null) {
-
-                // Uncomment when you don't want browser to stay open
-                // driver.quit();
-            }
-
-            // =================================================
-            // CLOSE CURRENT RESULT FILE
-            // =================================================
-
-            file.close();
-
-            // =================================================
-            // READ NEW RESULT
-            // =================================================
-
-            String newResult =
-                    Files.readString(
-                            new File(tempFile).toPath()
-                    );
-
-            // =================================================
-            // READ OLD RESULTS
-            // =================================================
-
-            String oldResult = "";
-
-            File oldFile =
-                    new File(resultsFile);
-
-            if (oldFile.exists()) {
-
-                oldResult =
-                        Files.readString(
-                                oldFile.toPath()
-                        );
-            }
-
-            // =================================================
+        } catch (Exception e) {
+            System.out.println(
+                    "Exception occurred: " + e.getMessage()
+            );
+        }  // =================================================
             // NEW RESULT ON TOP
             // =================================================
+    }}
+            
 
-            String combinedResult =
-                    "=========================================\n"
-                    + "NEW TEST EXECUTION\n"
-                    + "=========================================\n"
-                    + newResult
-                    + "\n\n"
-                    + oldResult;
 
-            // =================================================
-            // WRITE RESULT FILE
-            // =================================================
 
-            Files.writeString(
-                    oldFile.toPath(),
-                    combinedResult
-            );
 
-            // =================================================
-            // DELETE TEMP FILE
-            // =================================================
 
-            new File(tempFile).delete();
 
-            // =================================================
-            // RESTORE ECLIPSE CONSOLE
-            // =================================================
 
-            System.setOut(console);
 
-            System.out.println(
-                    "Test result saved to: "
-                            + resultsFile
-            );
-        }
-    }
-}
+    
+
+    
+
