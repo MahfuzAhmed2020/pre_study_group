@@ -17,6 +17,693 @@ Delivery address selected
 Checkout button clicked
 Alert Message:
 undefined
+Tracking Number: 2547D3C232
+Tracking From Checkout: 2547D3C232
+Alert accepted
+=========================================
+MY ORDERS
+Page Title: My Orders
+Number of orders: 21
+====================
+Order # 78
+Tracking: 2547D3C232
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 77
+Tracking: 7FF25879B7
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 76
+Tracking: 14CF96C8CF
+Status: Processing
+Total: $49.99
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Cancel Order
+====================
+Order # 75
+Tracking: D7C8B6BFE8
+Status: Processing
+Total: $49.99
+Delivery Address:
+789 Elm St, Anytown, CA 12345, USA
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Cancel Order
+====================
+Order # 74
+Tracking: 1AC6481880
+Status: Processing
+Total: $49.99
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Cancel Order
+====================
+Order # 73
+Tracking: ED92CE7FCB
+Status: Processing
+Total: $2329.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 1 ($699.99)
+Laptop x 1 ($1299.99)
+Headphones x 1 ($199.99)
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Cancel Order
+====================
+Order # 72
+Tracking: 8F3B27217A
+Status: Processing
+Total: $2329.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 1 ($699.99)
+Laptop x 1 ($1299.99)
+Headphones x 1 ($199.99)
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Cancel Order
+====================
+Order # 71
+Tracking: 5CAED51A3D
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 70
+Tracking: 34F4F2982A
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 69
+Tracking: 800B9E343E
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 68
+Tracking: 24B8030DD9
+Status: Processing
+Total: $2329.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 1 ($699.99)
+Laptop x 1 ($1299.99)
+Headphones x 1 ($199.99)
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Cancel Order
+====================
+Order # 67
+Tracking: 27BD11B69E
+Status: Processing
+Total: $2329.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 1 ($699.99)
+Laptop x 1 ($1299.99)
+Headphones x 1 ($199.99)
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Cancel Order
+====================
+Order # 66
+Tracking: C362D38162
+Status: Processing
+Total: $2329.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 1 ($699.99)
+Laptop x 1 ($1299.99)
+Headphones x 1 ($199.99)
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Cancel Order
+====================
+Order # 65
+Tracking: E87C937744
+Status: Processing
+Total: $2329.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 1 ($699.99)
+Laptop x 1 ($1299.99)
+Headphones x 1 ($199.99)
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Cancel Order
+====================
+Order # 63
+Tracking: 4C12764F2C
+Status: Processing
+Total: $4659.90
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 2 ($699.99)
+Laptop x 2 ($1299.99)
+Headphones x 2 ($199.99)
+Wireless Earbuds x 2 ($49.99)
+Bluetooth Speaker x 2 ($79.99)
+Cancel Order
+====================
+Order # 62
+Tracking: 4DC87970B8
+Status: Processing
+Total: $6989.85
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 3 ($699.99)
+Laptop x 3 ($1299.99)
+Headphones x 3 ($199.99)
+Wireless Earbuds x 3 ($49.99)
+Bluetooth Speaker x 3 ($79.99)
+Cancel Order
+====================
+Order # 60
+Tracking: 2076F36D69
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 59
+Tracking: 51E513DA36
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 23
+Tracking: 55901604EF
+Status: Processing
+Total: $49.99
+Delivery Address:
+789 Elm St, Anytown, CA 12345, USA
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Cancel Order
+====================
+Order # 15
+Tracking: E0BF19DDE5
+Status: Processing
+Total: $89.99
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 10
+Tracking: 4D3BC9EB51
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+=========================================
+LATEST ORDER
+Latest Order #: 78
+Latest Tracking: 2547D3C232
+Latest Status: Processing
+Latest Total: $252.95
+=========================================
+PASS: Latest Order # is 78
+PASS: Tracking number matches
+Checkout Tracking: 2547D3C232
+Orders Tracking:   2547D3C232
+PASS: Order status is Processing
+PASS: Order total is $252.95
+=========================================
+TEST EXECUTION COMPLETED
+=========================================
+
+
+=========================================
+NEW TEST EXECUTION
+=========================================
+=========================================
+TEST EXECUTION STARTED
+=========================================
+Page Title: Login
+Login completed
+Welcome mahfuz ahmed
+Added: Wireless Earbuds
+Added: Bluetooth Speaker
+Added: Smart Phone Case
+Added: Charging Cable Set
+Added: Fitness Tracker Band
+Card selected
+Delivery address selected
+Checkout button clicked
+Alert Message:
+undefined
+Tracking Number: 7FF25879B7
+Tracking From Checkout: 7FF25879B7
+Alert accepted
+=========================================
+MY ORDERS
+Page Title: My Orders
+Number of orders: 20
+====================
+Order # 77
+Tracking: 7FF25879B7
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 76
+Tracking: 14CF96C8CF
+Status: Processing
+Total: $49.99
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Cancel Order
+====================
+Order # 75
+Tracking: D7C8B6BFE8
+Status: Processing
+Total: $49.99
+Delivery Address:
+789 Elm St, Anytown, CA 12345, USA
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Cancel Order
+====================
+Order # 74
+Tracking: 1AC6481880
+Status: Processing
+Total: $49.99
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Cancel Order
+====================
+Order # 73
+Tracking: ED92CE7FCB
+Status: Processing
+Total: $2329.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 1 ($699.99)
+Laptop x 1 ($1299.99)
+Headphones x 1 ($199.99)
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Cancel Order
+====================
+Order # 72
+Tracking: 8F3B27217A
+Status: Processing
+Total: $2329.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 1 ($699.99)
+Laptop x 1 ($1299.99)
+Headphones x 1 ($199.99)
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Cancel Order
+====================
+Order # 71
+Tracking: 5CAED51A3D
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 70
+Tracking: 34F4F2982A
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 69
+Tracking: 800B9E343E
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 68
+Tracking: 24B8030DD9
+Status: Processing
+Total: $2329.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 1 ($699.99)
+Laptop x 1 ($1299.99)
+Headphones x 1 ($199.99)
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Cancel Order
+====================
+Order # 67
+Tracking: 27BD11B69E
+Status: Processing
+Total: $2329.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 1 ($699.99)
+Laptop x 1 ($1299.99)
+Headphones x 1 ($199.99)
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Cancel Order
+====================
+Order # 66
+Tracking: C362D38162
+Status: Processing
+Total: $2329.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 1 ($699.99)
+Laptop x 1 ($1299.99)
+Headphones x 1 ($199.99)
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Cancel Order
+====================
+Order # 65
+Tracking: E87C937744
+Status: Processing
+Total: $2329.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 1 ($699.99)
+Laptop x 1 ($1299.99)
+Headphones x 1 ($199.99)
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Cancel Order
+====================
+Order # 63
+Tracking: 4C12764F2C
+Status: Processing
+Total: $4659.90
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 2 ($699.99)
+Laptop x 2 ($1299.99)
+Headphones x 2 ($199.99)
+Wireless Earbuds x 2 ($49.99)
+Bluetooth Speaker x 2 ($79.99)
+Cancel Order
+====================
+Order # 62
+Tracking: 4DC87970B8
+Status: Processing
+Total: $6989.85
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Phone x 3 ($699.99)
+Laptop x 3 ($1299.99)
+Headphones x 3 ($199.99)
+Wireless Earbuds x 3 ($49.99)
+Bluetooth Speaker x 3 ($79.99)
+Cancel Order
+====================
+Order # 60
+Tracking: 2076F36D69
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 59
+Tracking: 51E513DA36
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 23
+Tracking: 55901604EF
+Status: Processing
+Total: $49.99
+Delivery Address:
+789 Elm St, Anytown, CA 12345, USA
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Cancel Order
+====================
+Order # 15
+Tracking: E0BF19DDE5
+Status: Processing
+Total: $89.99
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+====================
+Order # 10
+Tracking: 4D3BC9EB51
+Status: Processing
+Total: $252.95
+Delivery Address:
+, , ,
+Want to change/update the delivery address?
+Wireless Earbuds x 1 ($49.99)
+Bluetooth Speaker x 1 ($79.99)
+Smart Phone Case x 1 ($19.99)
+Charging Cable Set x 1 ($12.99)
+Fitness Tracker Band x 1 ($89.99)
+Cancel Order
+=========================================
+LATEST ORDER
+Latest Order #: 77
+Latest Tracking: 7FF25879B7
+Latest Status: Processing
+Latest Total: $252.95
+=========================================
+PASS: Latest Order # is 77
+PASS: Tracking number matches
+Checkout Tracking: 7FF25879B7
+Orders Tracking:   7FF25879B7
+PASS: Order status is Processing
+PASS: Order total is $252.95
+=========================================
+TEST EXECUTION COMPLETED
+=========================================
+
+
+=========================================
+NEW TEST EXECUTION
+=========================================
+=========================================
+TEST EXECUTION STARTED
+=========================================
+Page Title: Login
+Login completed
+Welcome mahfuz ahmed
+Added: Wireless Earbuds
+Added: Bluetooth Speaker
+Added: Smart Phone Case
+Added: Charging Cable Set
+Added: Fitness Tracker Band
+Card selected
+Delivery address selected
+Checkout button clicked
+
+
+=========================================
+NEW TEST EXECUTION
+=========================================
+=========================================
+TEST EXECUTION STARTED
+=========================================
+Page Title: Login
+Login completed
+Welcome mahfuz ahmed
+Added: Wireless Earbuds
+Added: Bluetooth Speaker
+Added: Smart Phone Case
+Added: Charging Cable Set
+Added: Fitness Tracker Band
+Card selected
+Delivery address selected
+Checkout button clicked
+
+
+=========================================
+NEW TEST EXECUTION
+=========================================
+=========================================
+TEST EXECUTION STARTED
+=========================================
+Page Title: Login
+Login completed
+Welcome mahfuz ahmed
+Added: Wireless Earbuds
+Added: Bluetooth Speaker
+Added: Smart Phone Case
+Added: Charging Cable Set
+Added: Fitness Tracker Band
+Card selected
+Delivery address selected
+Checkout button clicked
+
+
+=========================================
+NEW TEST EXECUTION
+=========================================
+=========================================
+TEST EXECUTION STARTED
+=========================================
+
+
+=========================================
+NEW TEST EXECUTION
+=========================================
+=========================================
+TEST EXECUTION STARTED
+=========================================
+Page Title: Login
+Login completed
+Welcome mahfuz ahmed
+Added: Wireless Earbuds
+Added: Bluetooth Speaker
+Added: Smart Phone Case
+Added: Charging Cable Set
+Added: Fitness Tracker Band
+Card selected
+Delivery address selected
+Checkout button clicked
+Alert Message:
+undefined
 Tracking Number: 51E513DA36
 Tracking From Checkout: 51E513DA36
 Alert accepted

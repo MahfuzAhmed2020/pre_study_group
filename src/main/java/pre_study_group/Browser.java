@@ -14,7 +14,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 import org.openqa.selenium.support.ui.Select;
 
 public class Browser {
@@ -35,10 +37,18 @@ public class Browser {
 
             dr = new FirefoxDriver();
 
-        } else {
+        } 
+        else if (browser.equalsIgnoreCase("edge")) {
+
+            dr = new EdgeDriver();
+
+        }
+        
+        
+        else {
 
             throw new IllegalArgumentException(
-                    "Browser must be chrome or firefox"
+                    "Browser must be chrome, firefox, or edge"
             );
         }
 
@@ -104,10 +114,10 @@ public class Browser {
         try {
 
             // =================================================
-            // OPEN CHROME
+            // OPEN edge
             // =================================================
 
-            driver = openBrowser("chrome");
+            driver = openBrowser("edge");
 
             driver.manage().timeouts()
                     .implicitlyWait(Duration.ofSeconds(10));
@@ -257,7 +267,7 @@ public class Browser {
             // HANDLE ALERT
             // =================================================
 
-            Thread.sleep(4000);
+            Thread.sleep(6000);
 
             Alert alert = driver.switchTo().alert();
 
