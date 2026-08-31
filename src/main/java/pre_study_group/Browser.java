@@ -1,3 +1,5 @@
+//C:\Users\mahfu\Desktop\OSA0130202007B\pre_study_group\src\main\java\pre_study_group
+// first start the doker and then run the application
 package pre_study_group;
 
 import java.io.File;

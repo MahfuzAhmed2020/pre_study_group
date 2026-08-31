@@ -1,0 +1,10 @@
+// first start the docker and then run the application
+
+//This project for mobile user which in on docker and
+ we are doing the BROWSER TESTING selenium and the API automation for it. WHICH IS BUILT ON PHP
+
+
+//http://localhost:8081
+http://localhost:8081/public/login.php 
+
+//C:\Users\mahfu\Desktop\OSA0130202007B\pre_study_group\src\main\java\pre_study_group
