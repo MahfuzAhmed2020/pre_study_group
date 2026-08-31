@@ -34,6 +34,21 @@
         <version>5.5.6</version>
     </dependency>
     
+    <!-- Cucumber Java -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.27.2</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- Cucumber TestNG -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.27.2</version>
+    <scope>test</scope>
+</dependency>
 
     </dependencies>
 

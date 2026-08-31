@@ -2,14 +2,12 @@
 
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="E-Commerce Test Suite">
+<suite name="E-Commerce BDD Suite">
 
-    <test name="Registration Test">
+    <test name="Registration and Order Test">
 
         <classes>
-
-            <class name="tests.RegistrationTest"/>
-
+            <class name="cucumber.TestRunner"/>
         </classes>
 
     </test>
