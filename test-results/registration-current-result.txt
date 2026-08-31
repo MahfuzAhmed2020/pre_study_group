@@ -6,7 +6,7 @@ Page Title: User Registration
 registration completed
 Clicking on login link to go to login page
 Login completed
-Welcome Rgukv Rgukv
+Welcome scsXZ scsXZ
 Added: Wireless Earbuds
 Added: Bluetooth Speaker
 Added: Smart Phone Case
@@ -15,42 +15,9 @@ Added: Fitness Tracker Band
 Card selected
 Delivery address selected
 Checkout button clicked
-Alert Message:
-undefined
-Tracking Number: 373CF8FE97
-Tracking From Checkout: 373CF8FE97
-Alert accepted
-=========================================
-MY ORDERS
-Page Title: My Orders
-Number of orders: 1
-====================
-Order # 64
-Tracking: 373CF8FE97
-Status: Processing
-Total: $252.95
-Delivery Address:
-, , ,
-Want to change/update the delivery address?
-Wireless Earbuds x 1 ($49.99)
-Bluetooth Speaker x 1 ($79.99)
-Smart Phone Case x 1 ($19.99)
-Charging Cable Set x 1 ($12.99)
-Fitness Tracker Band x 1 ($89.99)
-Cancel Order
-=========================================
-LATEST ORDER
-Latest Order #: 64
-Latest Tracking: 373CF8FE97
-Latest Status: Processing
-Latest Total: $252.95
-=========================================
-PASS: Latest Order # is 64
-PASS: Tracking number matches
-Checkout Tracking: 373CF8FE97
-Orders Tracking:   373CF8FE97
-PASS: Order status is Processing
-PASS: Order total is $252.95
-=========================================
-TEST EXECUTION COMPLETED
-=========================================
+Exception occurred: Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [aa64cb51-aee7-4275-a075-cd7fca8632ff, getAlertText {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 151.0.2, moz:accessibilityChecks: false, moz:buildID: 20260525130955, moz:geckodriverVersion: 0.37.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20056, moz:profile: C:\Users\mahfu\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: aa64cb51-aee7-4275-a075-cd7fca8632ff

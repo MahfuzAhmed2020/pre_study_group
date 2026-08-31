@@ -34,6 +34,25 @@ Added: Fitness Tracker Band
 Card selected
 Delivery address selected
 Checkout button clicked
+
+
+=========================================
+NEW TEST EXECUTION
+=========================================
+=========================================
+TEST EXECUTION STARTED
+=========================================
+Page Title: Login
+Login completed
+Welcome mahfuz ahmed
+Added: Wireless Earbuds
+Added: Bluetooth Speaker
+Added: Smart Phone Case
+Added: Charging Cable Set
+Added: Fitness Tracker Band
+Card selected
+Delivery address selected
+Checkout button clicked
 Alert Message:
 undefined
 Tracking Number: 2547D3C232
